@@ -26,6 +26,8 @@ Install dependencies
 npm install
 ```
 
+Create .env file in root folder and create there variables from .env.EXAMPLE file
+
 Start the development environment
 
 ```bash
