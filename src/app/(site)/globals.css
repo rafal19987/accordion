@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ededed;
+  --foreground: #0a0a0a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,10 +14,25 @@
   }
 }
 
+html::-webkit-scrollbar {
+  background: var(--background);
+  width: 2px;
+  border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #2dd282;
+  border-radius: 4px;
+}
+
 body {
-  color: var(--foreground);
+  color: #f0f7f7;
   background: var(--background);
   font-family: Poppins, sans-serif;
+}
+
+details[open] summary .rounded {
+  transform: rotate(0);
 }
 
 @layer utilities {
