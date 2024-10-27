@@ -18,6 +18,7 @@ const config: Config = {
       neutral: {
         200: '#F0F7F7',
         400: '#c6cdcc',
+        900: '#000103',
       },
     },
     extend: {
@@ -32,18 +33,38 @@ const config: Config = {
         'gradient-primary':
           'linear-gradient(266.36deg, #2DD282 1.76%, #90F4E8 100%)',
       },
+      transitionTimingFunction: {
+        easing: 'cubic-bezier(0, 0, 0.2, 1)',
+      },
       keyframes: {
         floating: {
           '0%': { transform: 'translate(0, 0rem)' },
-          '50%': { transform: 'translate(0, 0.25rem)' },
+          '50%': { transform: 'translate(0, 0.15rem)' },
           '100%': { transform: 'translate(0, -0rem)' },
         },
       },
       animation: {
         floating: 'floating 2s ease-in-out infinite',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            p: {
+              color: '#F0F7F7',
+            },
+            strong: {
+              background:
+                'linear-gradient(266.36deg, #2DD282 1.76%, #90F4E8 100%)',
+              '-webkit-background-clip': 'text',
+              '-webkit-text-fill-color': 'transparent',
+              'background-clip': 'text',
+              'text-fill-color': 'transparent',
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
 export default config;
