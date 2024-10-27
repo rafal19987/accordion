@@ -8,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pl' suppressHydrationWarning>
-      <body className={`${poppins.variable} antialiased`}>
+      <body className={`${poppins.variable} antialiased bg-neutral-900`}>
         <main className='mx-auto w-[calc(100%-(clamp(1rem_4.16667vw_2rem)*2))] max-w-7xl'>
           {children}
         </main>
