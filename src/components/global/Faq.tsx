@@ -41,16 +41,15 @@ export const Faq: React.FC<{ data: FAQProps }> = ({ data }) => {
       </h1>
 
       <div className='flex items-center justify-center flex-col gap-2'>
-        {data.list
-          .slice(0, visibleQuestions)
-          .map(({ question, answer }, idx) => (
-            <Accordion
-              key={idx}
-              question={question}
-              answer={answer}
-              idx={idx}
-            />
-          ))}
+        {data.list.map(({ question, answer }, idx) => (
+          <Accordion
+            key={idx}
+            question={question}
+            answer={answer}
+            idx={idx}
+            isVisible={idx >= visibleQuestions}
+          />
+        ))}
         {visibleQuestions < data.list.length && (
           <div className='flex flex-col max-w-fit w-full items-center gap-[6px] mt-24'>
             <div className='relative w-full h-[1px] bg-primary-600 transition-all duration-300'>

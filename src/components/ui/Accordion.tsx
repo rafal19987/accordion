@@ -5,9 +5,10 @@ export const Accordion: React.FC<{
   question: PortableTextValue;
   answer: PortableTextValue;
   idx: number;
-}> = ({ question, answer, idx }) => {
+  isVisible?: boolean;
+}> = ({ question, answer, idx, isVisible }) => {
   return (
-    <div className='w-full'>
+    <div className={`w-full ${!isVisible ? '' : 'hidden'}`}>
       <details className='group peer flex cursor-pointer justify-between'>
         <summary className='flex cursor-pointer justify-between px-0 pt-2 pb-3 lg:pt-5 lg:pb-6'>
           <div className='place-items-start justify-items-start gap-[clamp(1rem,4.1666666667vw,2rem)] grid grid-cols-12 w-full'>
