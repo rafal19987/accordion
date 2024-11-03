@@ -22,6 +22,18 @@ const config: Config = {
       },
     },
     extend: {
+      gap: {
+        'custom-gap': 'clamp(1rem, calc(2vw / 0.48), 2rem)',
+      },
+      margin: {
+        'custom-margin-small':
+          'calc(clamp(1.5rem,4.1666666667vw,3rem) + clamp(1rem,4.1666666667vw,2rem))',
+        'custom-margin':
+          'calc(clamp(1.5rem,4.1666666667vw,3rem) + clamp(1rem,4.1666666667vw,2rem) + 1rem)',
+      },
+      gridTemplateColumns: {
+        'custom-colums': 'clamp(1.5rem,4.1666666667vw,3rem) 1fr auto',
+      },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',

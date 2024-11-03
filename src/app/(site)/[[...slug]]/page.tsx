@@ -68,7 +68,7 @@ export default async function Page({ params }: Props) {
   if (!body) return <div>{params.slug}</div>;
 
   return (
-    <div className=''>
+    <>
       {body.map((item: any, index: number) => {
         const SectionComponent =
           SECTION_COMPONENTS[item._type as keyof typeof SECTION_COMPONENTS];
@@ -77,7 +77,7 @@ export default async function Page({ params }: Props) {
           <SectionComponent key={`${item._type}-${index}`} {...item} />
         ) : null;
       })}
-    </div>
+    </>
   );
 }
 
